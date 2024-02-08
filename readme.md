@@ -1,9 +1,27 @@
-# TASK-3-Static-Site-Generator
+# TASK-3-Static-Site-Generator: An Introduction.
+Welcome to the TASK-3-Static-Site-Generator. 
+<p>This project converts Markdown to a static HTML file.
+Markdown provides a relatively simpler and faster syntax for creating web content. however, Markdown is not the standard used by web browsers to display static web content.
+This is where 💻 <code>TASK-3-Static-Site-Generator</code>comes in handy.</p>
 
-## Clone this repository to your local folder for using SSG.
+The `TASK-3-Static-Site-Generator` uses 🐍 Python script to convert your `.md`  file into a `.html` file.
 
-## Steps to add your blog - 
-1. In config.josn write your Title,tags,date,and name.
+Here is how to get started
+
+### 1 Clone this repository to your local folder for using SSG.
+```
+$ git clone https://github.com/[owner_username]/TASK-3-Static-Site-Generator.git
+$ cd TASK-3-Static-Site-Generator
+```
+
+### 2. Configure Static HTML file Attributes 
+<p>Before adding your markdown file create a <code>config </code> file that tells the SSG how to set attributes like title, date etc.</p>
+
+```
+$ vim config.
+```
+In Your config. Specify the following `Title`, `tags`, `date`, and `name`.
+
 ```json
 {
     "title": "Very important click here",
@@ -13,11 +31,29 @@
     "writer" : "Anand Kumar" 
 }
 ```
-2. Write your article in article.md as Markdown file
-3. To add your blog to index.html now run the main.py file.
-4. Host or run index.html to see your blogs there
+### 3. Create your article in article.md as Markdown file
+```
+$ vim article.md
+```
+**Hint**: instead of using vim you can use a markdown editor or VS code to write the content of your article.
 
-## Salient Features - 
+### 4. Generate the Static Page using the `main.py` file.
+```
+$ python3 -m main.py
+```
+### 5. Verify The Conversion to HTML
+```
+$ cat index.html
+```
+Expected Output
+```
+<html>........
+...............
+</html>
+```
+alternatively, you can open the `index.html` file in a web browser to display the html content.
+
+## Some Key Features - 
 
 1.Tags
  - You can click on particular tags to see all blog post with that tag.
